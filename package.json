@@ -1,0 +1,22 @@
+{
+  "name": "wholet",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:backend": "npm -w apps/backend run start:dev",
+    "dev:frontend": "npm -w apps/frontend run dev",
+    "build:shared": "npm -w packages/shared run build",
+    "build:backend": "npm -w apps/backend run build",
+    "build:frontend": "npm -w apps/frontend run build",
+    "build": "npm run build:shared && npm run build:backend && npm run build:frontend",
+    "test:backend": "npm -w apps/backend run test",
+    "lint": "npm -w apps/backend run lint && npm -w apps/frontend run lint"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  }
+}

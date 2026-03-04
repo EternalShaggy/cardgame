@@ -1,0 +1,7 @@
+{
+  "buildCommand": "cd ../.. && npm install && npm run build:shared && npm run build:frontend",
+  "outputDirectory": "dist",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}

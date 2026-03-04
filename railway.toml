@@ -1,0 +1,9 @@
+[build]
+dockerfilePath = "apps/backend/Dockerfile"
+
+[deploy]
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 3
+
+[[services]]
+name = "wholet-backend"
